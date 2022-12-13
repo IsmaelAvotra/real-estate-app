@@ -3,14 +3,19 @@ import styles from './BuyBanner.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const imageUrl =
-  'https://bayut-production.s3.eu-central-1.amazonaws.com/image/110993385/6a070e8e1bae4f7d8c1429bc303d2008'
+import buyImage from '../../public/buy.jpeg'
 
 const BuyBanner = () => {
   return (
     <div className={styles.buybanner}>
       <div className={styles.left}>
-        <Image src={imageUrl} width={600} height={400}></Image>
+        <Image
+          src={buyImage}
+          width={600}
+          height={400}
+          placeholder='blur'
+          alt='buy image'
+        ></Image>
       </div>
       <div className={styles.right}>
         <h4>buy a home</h4>

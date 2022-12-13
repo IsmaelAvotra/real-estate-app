@@ -4,14 +4,19 @@ import styles from './RentalBanner.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const imageUrl =
-  'https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4'
+import rentImage from '../../public/rent.jpeg'
 
 const RentalBanner = () => {
   return (
     <div className={styles.rentalbanner}>
       <div className={styles.left}>
-        <Image src={imageUrl} width={600} height={400}></Image>
+        <Image
+          src={rentImage}
+          width={600}
+          height={400}
+          placeholder='blur'
+          alt='image for rent'
+        ></Image>
       </div>
       <div className={styles.right}>
         <h4>Rent a home</h4>

@@ -1,0 +1,65 @@
+.examples {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 0 2rem;
+  padding-bottom: 2rem;
+}
+
+.top img {
+  width: 100%;
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+.property {
+  background-color: #dddddd;
+  border-radius: 0.2rem;
+  transition: 0.4s;
+}
+
+.property:hover {
+  box-shadow: 1px 2px 4px #717171;
+}
+
+.bottom {
+  padding-bottom: 1rem;
+}
+
+.agency {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  align-items: center;
+}
+
+.agency img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.price {
+  display: flex;
+  gap: 0.4rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222222;
+}
+
+.price svg {
+  color: green;
+}
+
+.description p {
+  color: #717171;
+  margin-bottom: 0.5rem;
+  padding: 0 0.5rem;
+}
+
+.description svg {
+  color: #fc395c;
+  margin: 0 1rem;
+}
+
+.description .text {
+  color: #222222;
+}
