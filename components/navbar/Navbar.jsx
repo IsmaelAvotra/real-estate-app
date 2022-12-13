@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
-import styles from './Navbar.module.css'
-
 import Link from 'next/link'
 
+// import styles CSS
+import styles from './Navbar.module.css'
+
+// import react icons
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { AiOutlineSearch } from 'react-icons/ai'
 import { FaUserCircle, FaHome } from 'react-icons/fa'
 
-const navbar = () => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+
   return (
     <div className={styles.navbar}>
       <div className={styles.logo}>
@@ -45,4 +48,4 @@ const navbar = () => {
   )
 }
 
-export default navbar
+export default Navbar

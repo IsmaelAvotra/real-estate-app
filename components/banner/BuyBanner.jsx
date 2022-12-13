@@ -1,8 +1,10 @@
-import React from 'react'
-import styles from './BuyBanner.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 
+// import styles CSS
+import styles from './BuyBanner.module.css'
+
+// import image for banner
 import buyImage from '../../public/buy.jpeg'
 
 const BuyBanner = () => {

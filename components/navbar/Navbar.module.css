@@ -1,4 +1,6 @@
 .navbar {
+  position: sticky;
+  top: 0;
   background-color: #ffffff;
   display: flex;
   align-items: center;
@@ -28,7 +30,7 @@
 
 .search form {
   background-color: #ffffff;
-  width: 20vw;
+  width: 25vw;
   padding: 0.3rem;
   display: flex;
   align-items: center;

@@ -1,9 +1,10 @@
-import React from 'react'
-import styles from './RentalBanner.module.css'
-
 import Image from 'next/image'
 import Link from 'next/link'
 
+// import styles CSS
+import styles from './RentalBanner.module.css'
+
+// import image for banner
 import rentImage from '../../public/rent.jpeg'
 
 const RentalBanner = () => {

@@ -1,12 +1,18 @@
 import Link from 'next/link'
 import Image from 'next/image'
+
+// import styles CSS
 import styles from '../../styles/Home.module.css'
 
+// import react icons
 import { GoVerified } from 'react-icons/go'
 import { BsGridFill } from 'react-icons/bs'
 import { FaBed, FaBath } from 'react-icons/fa'
+
+// import default image when no image
 import defaultImage from '../../public/house.jpg'
 
+// import milify for round numbers
 import millify from 'millify'
 
 const Property = ({
