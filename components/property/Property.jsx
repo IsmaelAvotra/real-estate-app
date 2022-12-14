@@ -38,6 +38,8 @@ const Property = ({
             width={400}
             height={300}
             alt='image property'
+            placeholder='blur'
+            blurDataURL={coverPhoto.url}
           ></Image>
         </div>
         <div className={styles.bottom}>

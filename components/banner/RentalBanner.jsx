@@ -28,7 +28,7 @@ const RentalBanner = () => {
           Explore from Apartments, builder floors, villas <br />
           and more
         </p>
-        <Link href='/'>Explore Renting</Link>
+        <Link href='/search'>Explore Renting</Link>
       </div>
     </div>
   )
