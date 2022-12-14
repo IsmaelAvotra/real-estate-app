@@ -2,6 +2,7 @@
   padding: 1rem;
   text-align: center;
   background-color: #ffffff;
+  border-top: 1px solid #dddddd;
 }
 
 .footer p {

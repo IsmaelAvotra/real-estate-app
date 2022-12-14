@@ -1,3 +1,9 @@
+:root {
+  --swiper-pagination-bullet-size: 10px;
+  --swiper-pagination-bullet-width: 10px;
+  --swiper-pagination-bullet-height: 10px;
+}
+
 html,
 body {
   padding: 0;
@@ -20,6 +26,15 @@ a {
 .home {
   min-height: 100vh;
   background-color: #ffffff;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: #fc395c !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fc395c !important;
 }
 
 @media (prefers-color-scheme: dark) {

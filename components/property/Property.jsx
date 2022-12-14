@@ -45,7 +45,7 @@ const Property = ({
             <div className={styles.price}>
               <p>{isVerified && <GoVerified />}</p>
               <p>
-                MAD {millify(price)} {rentFrequency && `/${rentFrequency}`}
+                AED {millify(price)} {rentFrequency && `/${rentFrequency}`}
               </p>
             </div>
             <div className='agencyname'>
