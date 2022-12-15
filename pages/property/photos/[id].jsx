@@ -7,9 +7,9 @@ import { baseUrl, fetchApi } from '../../../utils/fetchApi'
 const Photos = ({ propertyDetails: { photos } }) => {
   return (
     <div className={styles.photos}>
-      {photos.map((photo, indx) => {
+      {photos.map((photo) => {
         return (
-          <div className={styles.image}>
+          <div className={styles.image} key={photo.id}>
             <Image
               src={photo.url}
               width={600}
@@ -17,7 +17,6 @@ const Photos = ({ propertyDetails: { photos } }) => {
               alt='all photos'
               placeholder='blr'
               blurDataURL={photo.url}
-              key={indx}
             />
           </div>
         )

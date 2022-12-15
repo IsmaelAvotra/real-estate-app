@@ -51,7 +51,7 @@ const Property = ({
               </p>
             </div>
             <div className='agencyname'>
-              <img
+              <Image
                 src={agency?.logo?.url}
                 alt='logo agency'
                 width={40}

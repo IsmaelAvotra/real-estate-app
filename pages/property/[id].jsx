@@ -76,7 +76,7 @@ const PropertyDetails = ({
             </p>
           </div>
           <div className='agencyname'>
-            <img
+            <Image
               src={agency?.logo?.url}
               alt='logo agency'
               width={80}
@@ -126,7 +126,6 @@ export default PropertyDetails
 
 export async function getServerSideProps({ params: { id } }) {
   const data = await fetchApi(`${baseUrl}/properties/detail?externalID=${id}`)
-  // console.log(data.photos)
   return {
     props: {
       propertyDetails: data,
