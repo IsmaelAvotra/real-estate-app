@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { baseUrl, fetchApi } from '../../utils/fetchApi'
 import styles from './PropertyDetails.module.css'
 
@@ -6,9 +6,13 @@ import Image from 'next/image'
 import { GoVerified } from 'react-icons/go'
 import { BsGridFill } from 'react-icons/bs'
 import { FaBed, FaBath } from 'react-icons/fa'
+import { GrGallery } from 'react-icons/gr'
 
 // import milify for round numbers
 import millify from 'millify'
+import Link from 'next/link'
+
+import { useRouter } from 'next/router'
 
 const PropertyDetails = ({
   propertyDetails: {
@@ -28,6 +32,8 @@ const PropertyDetails = ({
     photos,
   },
 }) => {
+  const router = useRouter()
+  const { id } = router.query
   return (
     <div className={styles.propertydetails}>
       <div className={styles.top}>
@@ -51,10 +57,15 @@ const PropertyDetails = ({
                 alt='image house'
                 placeholder='blur'
                 blurDataURL={photo.url}
+                key={photo.id}
               />
             )
           })}
         </div>
+        <Link href={`/property/photos/${id}`}>
+          <GrGallery />
+          <p>See all photos</p>
+        </Link>
       </div>
       <div className={styles.bottom}>
         <div className={styles.agency}>

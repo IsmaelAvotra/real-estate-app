@@ -28,7 +28,7 @@ const BuyBanner = () => {
           Explore from Apartments, builder floors, villas <br />
           and more
         </p>
-        <Link href='/search'>Explore Buying</Link>
+        <Link href='/search?purpose=for-sale'>Explore Buying</Link>
       </div>
     </div>
   )

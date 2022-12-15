@@ -9,6 +9,7 @@
 .top img {
   width: 100%;
   border-radius: 0.25rem 0.25rem 0 0;
+  object-fit: cover;
 }
 
 .property {

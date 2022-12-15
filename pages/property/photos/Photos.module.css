@@ -1,0 +1,40 @@
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 1fr);
+  gap: 5px;
+  padding: 2rem 0;
+  width: 50rem;
+  margin: 0 auto;
+}
+
+.image:nth-child(1),
+.image:nth-child(4),
+.image:nth-child(7),
+.image:nth-child(10),
+.image:nth-child(13),
+.image:nth-child(16),
+.image:nth-child(19),
+.image:nth-child(22),
+.image:nth-child(25),
+.image:nth-child(28),
+.image:nth-child(31),
+.image:nth-child(34),
+.image:nth-child(37),
+.image:nth-child(40),
+.image:nth-child(46),
+.image:nth-child(49),
+.image:nth-child(43) {
+  grid-column: span 2;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+  border-radius: 0.25rem;
+}
+
+.image:hover img {
+  filter: brightness(80%);
+}

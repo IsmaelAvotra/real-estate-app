@@ -10,6 +10,35 @@
   margin-bottom: 0.5rem;
   display: flex;
   gap: 1rem;
+  position: relative;
+}
+
+.top a {
+  position: absolute;
+  right: 1rem;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: #fc395c;
+  padding: 0.4rem 0.5rem;
+  color: #ffffff;
+  text-transform: capitalize;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  border: 1px solid transparent;
+  transition: 0.4s;
+}
+
+.top a:hover {
+  background-color: #ffffff;
+  color: #fc395c;
+  border-color: #fc395c;
+}
+
+.top a svg {
+  font-size: 1.5rem;
+  transition: 0.4s;
 }
 
 .left {

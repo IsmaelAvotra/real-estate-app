@@ -40,8 +40,8 @@ const Navbar = () => {
         >
           <Link href='/'>Inscription</Link>
           <Link href='/'>Connection</Link>
-          <Link href='/'>Buy Property</Link>
-          <Link href='/'>Rent Property</Link>
+          <Link href='/search?purpose=for-sale'>Buy Property</Link>
+          <Link href='/search?purpose=for-rent'>Rent Property</Link>
         </div>
       </div>
     </div>
