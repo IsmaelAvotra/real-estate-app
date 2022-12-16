@@ -4,7 +4,14 @@
   gap: 5px;
   padding: 2rem 0;
   width: 50rem;
+  height: 100vh;
   margin: 0 auto;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.photos::-webkit-scrollbar {
+  display: none;
 }
 
 .image:nth-child(1),
@@ -37,4 +44,56 @@
 
 .image:hover img {
   filter: brightness(80%);
+}
+
+.popUp {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.popUp.active {
+  display: flex;
+}
+
+.popUpContent {
+  max-width: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.popUpContent img {
+  width: 100%;
+  height: auto;
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: #dddddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.icon:hover {
+  background-color: #fc395c;
+  color: #ffffff;
 }

@@ -21,12 +21,12 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <div className={styles.search}>
+      {/* <div className={styles.search}>
         <form>
           <input type='text' placeholder='Search here...' />
           <AiOutlineSearch />
         </form>
-      </div>
+      </div> */}
 
       <div className={styles.menu} onClick={() => setIsOpen(!isOpen)}>
         <div className={styles.profile}>
