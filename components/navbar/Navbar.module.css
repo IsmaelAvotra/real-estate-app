@@ -27,45 +27,6 @@
   font-size: 1.4rem;
 }
 
-/* search  */
-
-.search form {
-  background-color: #ffffff;
-  width: 25vw;
-  padding: 0.3rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.2rem;
-  border: 1px solid #dddddd;
-  border-radius: 1rem;
-  box-shadow: 1px 1px 2px #dddddd;
-  transition: 0.4s ease-in-out;
-}
-
-.search form:hover {
-  box-shadow: 1px 3px 3px #dddddd;
-}
-
-.search form svg {
-  font-size: 1.2rem;
-  cursor: pointer;
-  border-radius: 50%;
-  color: #fc395c;
-}
-
-.search form input {
-  width: 90%;
-  border: none;
-  padding: 0.2rem 0.4rem;
-  background-color: #ffffff;
-  color: #000;
-}
-
-.search form input:focus {
-  outline: none;
-}
-
 /* menu  */
 
 .menu {

@@ -8,7 +8,7 @@ import { baseUrl, fetchApi } from '../../../utils/fetchApi'
 const Photos = ({ propertyDetails: { photos } }) => {
   const [model, setModel] = useState(false)
   const [tempImagesrc, setTempImagesrc] = useState('')
-  const getImage = (url) => {
+  const getImage = (url, event) => {
     setModel(true)
     setTempImagesrc(url)
   }

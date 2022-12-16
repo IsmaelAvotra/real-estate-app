@@ -40,6 +40,7 @@
   object-fit: cover;
   transition: 0.4s;
   border-radius: 0.25rem;
+  cursor: pointer;
 }
 
 .image:hover img {
