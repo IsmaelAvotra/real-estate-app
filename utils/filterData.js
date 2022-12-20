@@ -1,24 +1,25 @@
 export const filterData = [
   {
     items: [
+      { name: 'Purpose', value: 'Purpose' },
       { name: 'Buy', value: 'for-sale' },
       { name: 'Rent', value: 'for-rent' },
     ],
-    placeholder: 'Purpose',
     queryName: 'purpose',
   },
   {
     items: [
+      { name: 'Rent Frequency', value: 'Rent Frequency' },
       { name: 'Daily', value: 'daily' },
       { name: 'Weekly', value: 'weekly' },
       { name: 'Monthly', value: 'monthly' },
       { name: 'Yearly', value: 'yearly' },
     ],
-    placeholder: 'Rent Frequency',
     queryName: 'rentFrequency',
   },
   {
     items: [
+      { name: 'Min Price(AED)', value: 'Min Price(AED)' },
       { name: '10,000', value: '10000' },
       { name: '20,000', value: '20000' },
       { name: '30,000', value: '30000' },
@@ -27,11 +28,11 @@ export const filterData = [
       { name: '60,000', value: '60000' },
       { name: '85,000', value: '85000' },
     ],
-    placeholder: 'Min Price(AED)',
     queryName: 'minPrice',
   },
   {
     items: [
+      { name: 'Max Price(AED)', value: 'Max Price(AED)' },
       { name: '50,000', value: '50000' },
       { name: '60,000', value: '60000' },
       { name: '85,000', value: '85000' },
@@ -49,11 +50,11 @@ export const filterData = [
       { name: '900,000', value: '900000' },
       { name: '1000,000', value: '1000000' },
     ],
-    placeholder: 'Max Price(AED)',
     queryName: 'maxPrice',
   },
   {
     items: [
+      { name: 'Sort', value: 'Sort' },
       { name: 'Lowest Price', value: 'price-asc' },
       { name: 'Highest Price', value: 'price-des' },
       { name: 'Newest', value: 'date-asc' },
@@ -61,11 +62,11 @@ export const filterData = [
       { name: 'Verified', value: 'verified-score' },
       { name: 'City Level Score', value: 'city-level-score' },
     ],
-    placeholder: 'Sort',
     queryName: 'sort',
   },
   {
     items: [
+      { name: 'Max Area(sqft)', value: 'Max Area(sqft)' },
       { name: '1000', value: '1000' },
       { name: '2000', value: '2000' },
       { name: '3000', value: '3000' },
@@ -74,11 +75,11 @@ export const filterData = [
       { name: '10000', value: '10000' },
       { name: '20000', value: '20000' },
     ],
-    placeholder: 'Max Area(sqft)',
     queryName: 'areaMax',
   },
   {
     items: [
+      { name: 'Rooms', value: 'Rooms' },
       { name: '1', value: '1' },
       { name: '2', value: '2' },
       { name: '3', value: '3' },
@@ -90,11 +91,11 @@ export const filterData = [
       { name: '9', value: '9' },
       { name: '10', value: '10' },
     ],
-    placeholder: 'Rooms',
     queryName: 'roomsMin',
   },
   {
     items: [
+      { name: 'Baths', value: 'Baths' },
       { name: '1', value: '1' },
       { name: '2', value: '2' },
       { name: '3', value: '3' },
@@ -106,19 +107,19 @@ export const filterData = [
       { name: '9', value: '9' },
       { name: '10', value: '10' },
     ],
-    placeholder: 'Baths',
     queryName: 'bathsMin',
   },
   {
     items: [
+      { name: 'Furnish Type', value: 'Furnish Type' },
       { name: 'Furnished', value: 'furnished' },
       { name: 'Unfurnished', value: 'unfurnished' },
     ],
-    placeholder: 'Furnish Type',
     queryName: 'furnishingStatus',
   },
   {
     items: [
+      { name: 'Property Type', value: 'Property Type' },
       { name: 'Apartment', value: '4' },
       { name: 'Townhouses', value: '16' },
       { name: 'Villas', value: '3' },
@@ -129,7 +130,66 @@ export const filterData = [
       { name: 'Residential Floor', value: '12' },
       { name: 'Residential Building', value: '17' },
     ],
-    placeholder: 'Property Type',
     queryName: 'categoryExternalID',
   },
 ]
+
+export const getFilterValues = (filterValues) => {
+  const {
+    purpose,
+    rentFrequency,
+    categoryExternalID,
+    minPrice,
+    maxPrice,
+    areaMax,
+    roomsMin,
+    bathsMin,
+    sort,
+    locationExternalIDs,
+  } = filterValues
+
+  const values = [
+    {
+      name: 'purpose',
+      value: purpose,
+    },
+    {
+      name: 'rentFrequency',
+      value: rentFrequency,
+    },
+    {
+      name: 'minPrice',
+      value: minPrice,
+    },
+    {
+      name: 'maxPrice',
+      value: maxPrice,
+    },
+    {
+      name: 'areaMax',
+      value: areaMax,
+    },
+    {
+      name: 'roomsMin',
+      value: roomsMin,
+    },
+    {
+      name: 'bathsMin',
+      value: bathsMin,
+    },
+    {
+      name: 'sort',
+      value: sort,
+    },
+    {
+      name: 'locationExternalIDs',
+      value: locationExternalIDs,
+    },
+    {
+      name: 'categoryExternalID',
+      value: categoryExternalID,
+    },
+  ]
+
+  return values
+}

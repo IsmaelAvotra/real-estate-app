@@ -40,6 +40,7 @@ const Property = ({
             alt='image property'
             placeholder='blur'
             blurDataURL={coverPhoto.url}
+            loading='lazy'
           ></Image>
         </div>
         <div className={styles.bottom}>
@@ -56,6 +57,8 @@ const Property = ({
                 alt='logo agency'
                 width={40}
                 height={40}
+                placeholder='blur'
+                blurDataURL={agency?.logo.url}
               />
             </div>
           </div>

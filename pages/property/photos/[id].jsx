@@ -8,7 +8,7 @@ import { baseUrl, fetchApi } from '../../../utils/fetchApi'
 const Photos = ({ propertyDetails: { photos } }) => {
   const [model, setModel] = useState(false)
   const [tempImagesrc, setTempImagesrc] = useState('')
-  const getImage = (url, event) => {
+  const getImage = (url) => {
     setModel(true)
     setTempImagesrc(url)
   }
@@ -18,7 +18,9 @@ const Photos = ({ propertyDetails: { photos } }) => {
         className={model ? styles.popUp + ' ' + styles.active : styles.popUp}
       >
         <div className={styles.popUpContent}>
-          <Image src={tempImagesrc} width={600} height={400} alt='pop-up' />
+          {tempImagesrc && (
+            <Image src={tempImagesrc} width={600} height={400} alt='pop-up' />
+          )}
           <div className={styles.icon} onClick={() => setModel(false)}>
             <MdClose />
           </div>

@@ -1,0 +1,44 @@
+.noResult {
+  display: grid;
+  min-height: 50vh;
+  place-items: center;
+}
+
+.sorry {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sorry p {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sorry p svg {
+  color: #fc395c;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.buttons a {
+  background-color: #fc395c;
+  padding: 0.4rem 1rem;
+  color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  transition: 0.4s;
+}
+
+.buttons a:hover {
+  background-color: transparent;
+  border-color: #fc395c;
+  color: #fc395c;
+}

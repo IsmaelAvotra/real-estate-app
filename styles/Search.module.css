@@ -16,8 +16,8 @@
 
 .results {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1.2rem;
   padding: 0 2rem;
   padding-bottom: 2rem;
 }

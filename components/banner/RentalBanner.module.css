@@ -14,11 +14,12 @@
   padding: 1rem 0;
 }
 
-.right h4 {
+.right span {
   text-transform: uppercase;
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
   color: #717171;
+  font-weight: 600;
 }
 
 .right h3 {

@@ -5,22 +5,24 @@ import Link from 'next/link'
 import styles from './RentalBanner.module.css'
 
 // import image for banner
-import rentImage from '../../public/rent.jpeg'
+import rentImage from '../../public/rent.jpg'
 
 const RentalBanner = () => {
   return (
     <div className={styles.rentalbanner}>
       <div className={styles.left}>
-        <Image
-          src={rentImage}
-          width={600}
-          height={400}
-          placeholder='blur'
-          alt='image for rent'
-        ></Image>
+        <Link href='/rent.jpg' target='_blank'>
+          <Image
+            src={rentImage}
+            width={600}
+            height={400}
+            placeholder='blur'
+            alt='image for rent'
+          ></Image>
+        </Link>
       </div>
       <div className={styles.right}>
-        <h4>Rent a home</h4>
+        <span>Rent a home</span>
         <h3>
           Rental homes for <br /> Everyone
         </h3>

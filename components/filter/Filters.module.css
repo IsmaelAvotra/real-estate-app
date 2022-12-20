@@ -1,0 +1,40 @@
+.filters {
+  background: linear-gradient(#dddddd, #edf2f7);
+  padding: 1rem 2rem;
+}
+
+.filters p {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  color: #222222;
+  cursor: pointer;
+}
+
+.filters p svg {
+  font-size: 1.2rem;
+}
+
+.filtersContent {
+  margin-top: 1rem;
+  padding: 1rem 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.filtersContent.active {
+  display: flex;
+}
+
+.filter select {
+  background-color: #ffffff;
+  padding: 0.2rem 0.3rem;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+}

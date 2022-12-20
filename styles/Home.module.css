@@ -1,7 +1,7 @@
 .examples {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1.2rem;
   padding: 0 2rem;
   padding-bottom: 2rem;
 }
@@ -51,7 +51,7 @@
 }
 
 .description p {
-  color: #717171;
+  color: #222222;
   margin-bottom: 0.5rem;
   padding: 0 0.5rem;
 }

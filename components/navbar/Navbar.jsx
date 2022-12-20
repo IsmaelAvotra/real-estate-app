@@ -5,9 +5,9 @@ import Link from 'next/link'
 import styles from './Navbar.module.css'
 
 // import react icons
-import { GiHamburgerMenu } from 'react-icons/gi'
-import { AiOutlineSearch } from 'react-icons/ai'
-import { FaUserCircle, FaHome } from 'react-icons/fa'
+import { GiHamburgerMenu, GiHouseKeys } from 'react-icons/gi'
+import { AiOutlineUserAdd, AiOutlineUser } from 'react-icons/ai'
+import { FaUserCircle, FaHome, FaMoneyBillAlt } from 'react-icons/fa'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -17,7 +17,7 @@ const Navbar = () => {
       <div className={styles.logo}>
         <Link href='/'>
           <FaHome />
-          <h1>Your Home</h1>
+          <h1>New Home</h1>
         </Link>
       </div>
 
@@ -31,10 +31,20 @@ const Navbar = () => {
             isOpen ? styles.navigation + ' ' + styles.active : styles.navigation
           }
         >
-          <Link href='/'>Inscription</Link>
-          <Link href='/'>Connection</Link>
-          <Link href='/search?purpose=for-sale'>Buy Property</Link>
-          <Link href='/search?purpose=for-rent'>Rent Property</Link>
+          <Link href='/'>
+            {' '}
+            <AiOutlineUserAdd /> Inscription
+          </Link>
+          <Link href='/'>
+            <AiOutlineUser /> Connection
+          </Link>
+          <Link href='/search?purpose=for-sale'>
+            {' '}
+            <FaMoneyBillAlt /> Buy Property
+          </Link>
+          <Link href='/search?purpose=for-rent'>
+            <GiHouseKeys /> Rent Property
+          </Link>
         </div>
       </div>
     </div>
