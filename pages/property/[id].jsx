@@ -1,5 +1,7 @@
 import React from 'react'
+import Link from 'next/link'
 import { baseUrl, fetchApi } from '../../utils/fetchApi'
+import { millify } from '../../utils/millify'
 import styles from './PropertyDetails.module.css'
 
 import Image from 'next/image'
@@ -7,10 +9,6 @@ import { GoVerified } from 'react-icons/go'
 import { BsGridFill } from 'react-icons/bs'
 import { FaBed, FaBath } from 'react-icons/fa'
 import { GrGallery } from 'react-icons/gr'
-
-// import milify for round numbers
-import millify from 'millify'
-import Link from 'next/link'
 
 import { useRouter } from 'next/router'
 
@@ -38,31 +36,35 @@ const PropertyDetails = ({
     <div className={styles.propertydetails}>
       <div className={styles.top}>
         <div className={styles.left}>
-          <Image
-            src={photos[0].url}
-            width={800}
-            height={500}
-            alt='image house'
-            placeholder='blur'
-            blurDataURL={photos[0].url}
-          />
+          <Link href={`/property/photos/${id}`}>
+            <Image
+              src={photos[0].url}
+              width={800}
+              height={500}
+              alt='image house'
+              placeholder='blur'
+              blurDataURL={photos[0].url}
+            />
+          </Link>
         </div>
         <div className={styles.right}>
           {photos.slice(1, 5).map((photo) => {
             return (
-              <Image
-                src={photo.url}
-                width={250}
-                height={200}
-                alt='image house'
-                placeholder='blur'
-                blurDataURL={photo.url}
-                key={photo.id}
-              />
+              <Link href={`/property/photos/${id}`}>
+                <Image
+                  src={photo.url}
+                  width={250}
+                  height={200}
+                  alt='image house'
+                  placeholder='blur'
+                  blurDataURL={photo.url}
+                  key={photo.id}
+                />
+              </Link>
             )
           })}
         </div>
-        <Link href={`/property/photos/${id}`}>
+        <Link href={`/property/photos/${id}`} className={styles.allPhotos}>
           <GrGallery />
           <p>See all photos</p>
         </Link>
@@ -86,7 +88,7 @@ const PropertyDetails = ({
         </div>
         <div className={styles.description}>
           <p className={styles.rooms}>
-            {rooms} <FaBed /> | {baths} <FaBath /> | {millify(area)} sqft{' '}
+            {rooms} <FaBed /> | {baths} <FaBath /> | {area.toFixed(2)} sqft{' '}
             <BsGridFill />
           </p>
           <p className={styles.title}>{title}</p>

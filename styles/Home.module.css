@@ -64,3 +64,32 @@
 .description .text {
   color: #222222;
 }
+
+/* ==========MEDIA QUERIES =================== */
+
+@media screen and (max-width: 1100px) {
+  .examples {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .examples {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .examples {
+    padding: 0 0.5rem;
+  }
+  .bottom {
+    padding-bottom: 0.8rem;
+  }
+  .agency {
+    padding: 0.3rem 0.5rem;
+  }
+  .price {
+    font-size: 1rem;
+  }
+}

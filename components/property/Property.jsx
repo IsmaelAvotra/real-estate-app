@@ -12,8 +12,7 @@ import { FaBed, FaBath } from 'react-icons/fa'
 // import default image when no image
 import defaultImage from '../../public/house.jpg'
 
-// import milify for round numbers
-import millify from 'millify'
+import { millify } from '../../utils/millify'
 
 const Property = ({
   property: {
@@ -64,11 +63,11 @@ const Property = ({
           </div>
           <div className={styles.description}>
             <p>
-              {rooms} <FaBed /> | {baths} <FaBath /> | {millify(area)} sqft{' '}
+              {rooms} <FaBed /> | {baths} <FaBath /> | {area.toFixed(2)} sqft{' '}
               <BsGridFill />
             </p>
             <p className={styles.text}>
-              {title.length > 40 ? title.substring(0, 40) + '...' : title}
+              {title.length > 35 ? title.substring(0, 35) + '...' : title}
             </p>
           </div>
         </div>

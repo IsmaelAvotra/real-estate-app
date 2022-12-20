@@ -13,7 +13,7 @@
   position: relative;
 }
 
-.top a {
+.top .allPhotos {
   position: absolute;
   right: 1rem;
   bottom: 2rem;
@@ -158,4 +158,129 @@
   border-radius: 2px;
   color: #222222;
   font-size: 0.9rem;
+}
+
+/* =============MEDIA QUERIES ============== */
+
+@media screen and (max-width: 1100px) {
+  .propertydetails {
+    padding: 2rem 1rem;
+  }
+  .top {
+    flex-direction: column;
+  }
+  .bottom {
+    padding: 0 1rem;
+    padding-bottom: 2rem;
+    border-radius: 0 0 5px 5px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .propertydetails {
+    padding: 1rem 0.5rem;
+  }
+
+  .bottom {
+    padding: 0 0.5rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .top {
+    gap: 0.2rem;
+  }
+
+  .top a svg {
+    font-size: 1.2rem;
+  }
+
+  .top .allPhotos {
+    font-size: 1rem;
+  }
+
+  .right {
+    gap: 0.2rem;
+  }
+
+  .bottom {
+    padding: 1rem 0.2rem;
+    padding-top: 0;
+  }
+
+  .agency {
+    padding: 0.4rem 0;
+  }
+
+  .agency img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .price {
+    font-size: 1.2rem;
+  }
+
+  .description p {
+    font-size: 1rem;
+  }
+
+  .title {
+    font-size: 1.2rem !important;
+  }
+  .text {
+    line-height: 1.3rem;
+  }
+
+  .flexwrap {
+    padding: 0 0.2rem;
+  }
+
+  .flexwrap span {
+    font-size: 1.2rem;
+  }
+
+  .facilities {
+    padding: 0.2rem;
+  }
+  .facilities h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .top {
+    gap: 0.1rem;
+  }
+  .top a svg {
+    font-size: 1.1rem;
+  }
+
+  .top .allPhotos {
+    font-size: 0.9rem;
+    bottom: 1rem;
+    padding: 0.3rem 0.4rem;
+  }
+
+  .agency img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .rooms {
+    font-size: 1rem !important;
+  }
+
+  .description p {
+    font-size: 0.9rem;
+  }
+
+  .facilities {
+    margin-top: 1rem;
+  }
+
+  .facility {
+    gap: 0.5rem;
+  }
 }

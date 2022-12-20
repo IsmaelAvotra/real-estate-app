@@ -13,3 +13,11 @@
   font-size: 1.1rem;
   color: #fc395c;
 }
+
+/* ======MEDIA QUERIES ===========  */
+
+@media screen and (max-width: 450px) {
+  .footer {
+    padding: 0.6rem 1rem;
+  }
+}

@@ -38,3 +38,41 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
+/* ================MEDIA QUERIES ================  */
+
+@media screen and (max-width: 850px) {
+  .filtersContent {
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .filters {
+    padding: 0.5rem 1rem;
+  }
+
+  .filters p {
+    font-size: 1rem;
+  }
+
+  .filtersContent {
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+  .filter select {
+    padding: 0.1rem 0.2rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .filters {
+    padding: 0.5rem;
+  }
+
+  .filtersContent {
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+  }
+}
