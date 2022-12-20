@@ -5,6 +5,10 @@ const nextConfig = {
     domains: ['bayut-production.s3.eu-central-1.amazonaws.com'],
     unoptimized: true,
   },
+  i18n: {
+    locales: ['en'],
+    defaultLocale: 'en',
+  },
 }
 
 module.exports = nextConfig
