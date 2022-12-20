@@ -50,7 +50,7 @@ const PropertyDetails = ({
         <div className={styles.right}>
           {photos.slice(1, 5).map((photo) => {
             return (
-              <Link href={`/property/photos/${id}`}>
+              <Link href={`/property/photos/${id}`} key={photo.id}>
                 <Image
                   src={photo.url}
                   width={250}
@@ -58,7 +58,6 @@ const PropertyDetails = ({
                   alt='image house'
                   placeholder='blur'
                   blurDataURL={photo.url}
-                  key={photo.id}
                 />
               </Link>
             )
